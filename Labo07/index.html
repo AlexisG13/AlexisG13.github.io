@@ -4,9 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="asset/css/index.css">
+    <title>Javascript and Dom</title>
 </head>
+
 <body>
-    <h1>HEHE XD</h1>
+    <div class="row">
+        <div class="container" id="c1"></div>
+        <div class="container c2"></div>
+        <div class="container c2"></div>
+        <div class="container c2"></div>
+        <div class="container c2"></div>
+        <div class="container c2"></div>
+        <div class="container c2"></div>
+    </div>
+ 
+    <div class="row">
+            <input type="button" value="click aca" id="btn-click">
+            <input type="text" name="" id="textMsj">
+            <input type="button" value="copiar" id="btnCopy">
+            <div id="showMsj"></div> 
+    </div>
+
+    <div id="links">
+
+    </div>
+   <br><br>
+    <div class="formulario">
+        <form id="peopleForm" name="peopleForm" method="POST">
+            <input type="text" name="name" placeholder="name" id="textName">
+            <input type="number" name="age" id="" placeholder="age" id="textAge">
+            <input type="submit" value="send" id="btn-send">
+        </form>
+        <br>
+        <table border="1" id="people">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody id="tablePeople">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="asset/js/script.js"></script>
 </body>
+
 </html>
