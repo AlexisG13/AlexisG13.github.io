@@ -36,9 +36,14 @@ formulario.addEventListener("submit", (evt) => {
         descripcion: formulario[2].value,
         cantidad: formulario[3].value
     }
-    bitacoras.push(bitacora);
-    cont++;
-    mostrar();
+    if (bitacora.cantidad >= 0) {
+        bitacoras.push(bitacora);
+        cont++;
+        mostrar();
+    }
+    else{
+        alert("No se puede incluir horas negativas");
+    }
 });
 
 const crearElemento = (bitacora, tbody) => {
@@ -51,6 +56,13 @@ const crearElemento = (bitacora, tbody) => {
     });
     tbody.appendChild(tr);
 }
+
+document.getElementById("elm").addEventListener("click", (evt) => {
+    tbody = document.querySelector(".tabla-btc tbody");
+    tbody.removeChild(tbody.lastChild);
+    bitacoras.pop();
+    cont -= 1;
+})
 
 const eliminar = (tbody) => {
     while (tbody.firstChild) {
